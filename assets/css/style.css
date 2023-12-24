@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before{
+        box-sizing: inherit;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+}
+/* Кнопка */
+.btn{
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background-color: rgb(115, 192, 70);
+    padding: 13px 20px;
+    transition: background-color .2s;
+}
+.btn:hover{
+    background-color: rgb(155, 209, 124);
+}
+.btn:active{
+    outline:1px solid rgb(155, 209, 124);
+    outline-offset: 3px;
+}
+
+
+/* Секция */
+.section{
+    background-color: rgb(222, 232, 236);
+    padding: 2em;
+}
+/* заголовок */
+.title{
+    font-size: xx-large;
+    border-bottom: 2px solid black;
+}
+.about__title{
+    text-align: center;
+}
+/* img */
+.img{
+    width:200px;
+    height: 200px;
+    mix-blend-mode: luminosity;
+}
+/* card */
+.card{
+    width:374px;
+    min-height: 250px;
+    border-radius: 25px;
+    background-color: seashell;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__location{
+    color:gray;
+}
+.card__btn{
+    width:90%;
+}
+
+.about__card{
+    margin:25px;
+}
+
+
+    /*Модификатор активный */
+    .card_active{
+        border:5px solid rgb(238, 185, 12);
+    }
+    .card_active::before{
+        content: "this";
+        background-color: rgb(238, 185, 12);
+        color:white;
+        padding: 5px 25px;
+        border-radius:0 0 15px 15px;
+        text-align: center;
+        font-size: larger;
+        position: relative;
+        top: -27px;
+    }
+    .card_active > .btn{
+        background-color: rgb(238, 185, 12);
+    }
+/* show */
+.show{
+    display: flex;
+    flex-direction: row;
+}
